@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [23, 45, 67, 234, 56, , 23, 56, 45, 34, 45, 67, 6, 5]
+        var Evencount = "";
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                document.write(i + " is index number:" + "contain even number: " + arr[i] + "<br />")
+
+                Evencount++
+            }
+        }
+        document.write("totoal even numbers are : " + Evencount)    
+    </script>
+</body>
+
+</html>

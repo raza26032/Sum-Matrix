@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply</title>
+</head>
+
+<div class="one">
+    <span>
+        Matrix 1:
+    </span>
+    <div id="arr1"></div>
+</div>
+
+<div class="two">
+    <span>
+        Matrix 2:
+    </span>
+    <div id="arr2"></div>
+</div>
+
+<div class="three">
+    <span>
+        Result:
+    </span>
+    <div id="result"></div>
+</div>
+
+<body>
+    <script>
+        var i, j, k;
+        let arr1 = [
+            [0, 0],
+            [0, 0]
+        ];
+        let arr2 = [
+            [0, 0],
+            [0, 0]
+        ];
+
+        let result = [
+            [0, 0],
+            [0, 0]
+        ];
+
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr1[i].length; j++) {
+
+                console.log("i = ", i, "and j = ", j);
+                arr1[i][j] = +prompt("getting matrix one data, Enter " + i + "," + j + ": ");
+            }
+        }
+
+        for (let i = 0; i < arr2.length; i++) {
+            for (let j = 0; j < arr2[i].length; j++) {
+
+                console.log("i = ", i, "and j = ", j);
+                arr2[i][j] = +prompt("getting matrix two data, Enter " + i + "," + j + ": ");
+            }
+        }
+
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                for (k = 0; k < 3; k++)
+                    result[i][j] = result[i][j] + arr1[i][k] * arr2[k][j];
+            }
+        }
+
+        document.getElementById("arr1").innerHTML = arr1[0] + "<br>" + arr1[1];
+        document.getElementById("arr2").innerHTML = arr2[0] + "<br>" + arr2[1];
+        document.getElementById("result").innerHTML = result[0] + "<br>" + result[1];
+
+        // document.write("Output:<br>");
+
+        // for (i = 0; i < 3; i++) {
+        //     for (j = 0; j < 3; j++)
+        //         document.write(arr3[i][j] + " ");
+        //     document.write("<br>");
+        // }
+    </script>
+</body>
+
+</html>
